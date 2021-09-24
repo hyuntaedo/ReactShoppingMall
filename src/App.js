@@ -1,20 +1,20 @@
-import './App.css';
-import Header from './components/Header'
-import Prototypes from './components/Protypes'
-import Orders from './components/Orders'
-import Footer from './components/Footer'
+import Header from "./components/Header";
+import Prototypes from "./components/Protypes";
+import Orders from "./components/Orders";
+import Footer from "./components/Footer";
+import AppStateProvider from "./providers/AppStateProvider";
 
 function App() {
   return (
-    <>
-    <Header></Header>
-    <div className="container">
-      <Prototypes></Prototypes>
-      <Orders></Orders>
-      <Footer></Footer>
-    </div>
-    </>
-  )
+    <AppStateProvider>
+      <Header />
+      <div className="container">
+        <Prototypes />
+        <Orders />
+        <Footer />
+      </div>
+    </AppStateProvider>
+  );
 }
 
 export default App;
